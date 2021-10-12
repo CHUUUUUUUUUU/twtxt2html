@@ -21,9 +21,9 @@ script="
 if [ "$nojs" = true ]
 then
     echo "$t$twtxt" >> $output
-    sed -e "s/[0-9]*-[0-9]*-[0-9]*T[0-9]*:[0-9]*:[0-9]*.[0-9]*:[0-9]*/<span id=\"&\"  datetime=\"&\" title=\"&\"><a href=\"#&\">&<\/a><\/span>/g;/^$/d;G;s/	/<br \/>/g" -i $output
+    sed -e "s/[0-9]*-[0-9]*-[0-9]*T[0-9]*:[0-9]*:[0-9]*.[0-9]*:[0-9]*/<span id=\"&\"  datetime=\"&\" title=\"&\"><a href=\"#&\">&<\/a><\/span>/g;/^$/d;G;s/\t/<br \/>/g" -i $output
 else
     echo "$t$timeago$twtxt$script" >> $output
-    sed -e "s/[0-9]*-[0-9]*-[0-9]*T[0-9]*:[0-9]*:[0-9]*.[0-9]*:[0-9]*/<span class=\"timeago\" datetime=\"&\" title=\"&\">&<\/span>/g;/^$/d;G;s/	/<br \/>/g" -i $output
+    sed -e "s/[0-9]*-[0-9]*-[0-9]*T[0-9]*:[0-9]*:[0-9]*.[0-9]*:[0-9]*/<span class=\"timeago\" datetime=\"&\" title=\"&\">&<\/span>/g;/^$/d;G;s/\t/<br \/>/g" -i $output
 fi
 

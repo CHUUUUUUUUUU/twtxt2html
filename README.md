@@ -2,7 +2,7 @@ twtxt to html
 
 twtxt -> markdown -> html
 
-**need** your twtxt date format is `2021-10-12T12:34:56+08:00` ,  sort date from newest to oldest
+**need** your twtxt date format is `2021-10-12T12:34:56+08:00` 
 
 by static site generator Markdown render page
 
@@ -22,12 +22,14 @@ this a twtxt
 
 2021-09-19T12:49:55+08:00	Not ready yet
 2021-09-10T21:45:15+08:00	wait
+
+# [@tw.txt](url)
 ```
 
 if nojs=true , output
 
-```
-[@tw.txt](/tw.txt)
+```html
+[@tw.txt](url)
 
 <span id="2021-09-19T12:49:55+08:00"  datetime="2021-09-19T12:49:55+08:00" title="2021-09-19T12:49:55+08:00"><a href="#2021-09-19T12:49:55+08:00">2021-09-19T12:49:55+08:00</a></span><br />Not ready yet
 
@@ -37,8 +39,8 @@ if nojs=true , output
 
 if nojs=false , output
 
-```
-[@tw.txt](/tw.txt)
+```html
+[@tw.txt](url)
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/timeago.js@3.0.2/dist/timeago.min.js"></script>
 

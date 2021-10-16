@@ -1,12 +1,15 @@
 #!/bin/sh
 
-twtxt="$(cat static/tw.txt)"
+input="static/tw.txt"
 
 output="content/twtxt.md"
 
-t="[@tw.txt](/tw.txt)
-"
 nojs=false
+
+twtxt="$(cat $input | sed "/^#/d" | sort -r)"
+
+t="$(cat $input | sed -e "/^[0-9]/d;s/^# //g")
+"
 
 timeago="
 
